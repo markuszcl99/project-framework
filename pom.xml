@@ -21,4 +21,31 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <!--
+        聚合工程 分为父子工程，一个父工程下可以有多个子工程
+        一般 父工程加载公用的依赖，子工程各自加载所定制需要的依赖
+        如果子工程间需要互相依赖的话，需要各自进行构建依赖进行导入
+    -->
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- SpringBoot的依赖配置-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.5.14</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- SpringBoot Web容器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
