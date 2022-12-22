@@ -5,7 +5,7 @@
 ############################################################
 server:
   # 应用的端口
-  port: 8080
+  port: 8081
   servlet:
     # 应用的访问路径
     context-path: /
@@ -36,3 +36,13 @@ mybatis:
   mapper-locations: classpath:/mapper/*Mapper.xml
   # 全局配置文件路径
   config-location: classpath:/mybatis/mybatis-config.xml
+
+############################################################
+#
+# 配置demo
+#
+############################################################
+people:
+  name: markus
+  sex: male
+  age: 24
