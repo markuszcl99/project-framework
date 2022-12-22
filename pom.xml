@@ -13,7 +13,6 @@
         <module>project-common</module>
         <module>project-mapper</module>
         <module>project-service</module>
-        <module>mybatis-generator</module>
     </modules>
 
     <properties>
